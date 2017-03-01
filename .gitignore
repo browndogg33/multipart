@@ -1,0 +1,62 @@
+# Maven #
+#####################
+target/
+ 
+# Java #
+#####################
+*.class
+*.jar
+*.war
+*.ear
+ 
+# OSX #
+#####################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+.AppleDouble
+.LSOverride
+ 
+# Eclipse #
+#####################
+*.pydevproject
+.project
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+
+# Intellij #
+######################
+*.iml
+.idea/
+
+# External tool builders
+.externalToolBuilders/
+ 
+# Locally stored "Eclipse launch configurations"
+*.launch
+ 
+# CDT-specific
+.cproject
+ 
+# PDT-specific
+.buildpath
+
+#Maven release artifacts
+release.properties
+.mvn/*
+*.releaseBackup
