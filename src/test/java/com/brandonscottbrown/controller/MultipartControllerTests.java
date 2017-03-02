@@ -33,11 +33,12 @@ public class MultipartControllerTests{
 
     @Test
     public void testFileUploadWithString() throws Exception {
-        MockMultipartFile file = new MockMultipartFile("file", "file.txt",  "application/json",  "{\"json\": \"someValue\"}".getBytes());
+        MockMultipartFile file = new MockMultipartFile("data", "file-name.data", "text/plain", "some other type".getBytes());
+        MockMultipartFile jsonFile = new MockMultipartFile("jsonPartRequest", "", "application/json", "{\"subject\": \"someValue\", \"id\": 1}".getBytes());
 
         mvc.perform(fileUpload("/multipart/string")
-                .file(file)
-                .param("id", "1"))
+                .file(jsonFile)
+                .file(file))
                 .andExpect(status().isOk());
     }
 }
