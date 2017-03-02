@@ -15,7 +15,7 @@ import org.springframework.web.multipart.MultipartFile;
 public class MultipartController {
 
     @RequestMapping(value = "/multipart", method = RequestMethod.POST, consumes = {"multipart/form-data"})
-    public ResponseEntity<MultipartResponse> templatesPost(@RequestPart(value = "id", required = true) Long id,
+    public ResponseEntity<MultipartResponse> fileUploadWithParams(@RequestPart(value = "id", required = true) Long id,
                                                            @RequestPart(value = "file", required = true) MultipartFile file) {
         //do some stuff
         MultipartResponse response = new MultipartResponse("SAVED", new DateTime());
