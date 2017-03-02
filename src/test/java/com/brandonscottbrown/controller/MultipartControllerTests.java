@@ -25,8 +25,9 @@ public class MultipartControllerTests extends MultipartApplicationTests{
     }
 
     @Test
-    public void validateFileUploadWithParams() throws Exception {
+    public void testFileUploadWithParams() throws Exception {
         mockMvc.perform(post("/multipart"))
                 .andExpect(status().isOk());
     }
+
 }
