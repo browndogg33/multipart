@@ -1,12 +1,12 @@
 package com.brandonscottbrown.response;
 
-import org.joda.time.DateTime;
+import java.util.Date;
 
 public class MultipartResponse {
     private String status;
-    private DateTime timestamp;
+    private Date timestamp;
 
-    public MultipartResponse(String status, DateTime timestamp) {
+    public MultipartResponse(String status, Date timestamp) {
         this.status = status;
         this.timestamp = timestamp;
     }
@@ -19,11 +19,11 @@ public class MultipartResponse {
         this.status = status;
     }
 
-    public DateTime getTimestamp() {
+    public Date getTimestamp() {
         return timestamp;
     }
 
-    public void setTimestamp(DateTime timestamp) {
+    public void setTimestamp(Date timestamp) {
         this.timestamp = timestamp;
     }
 }
